@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap");
+
+* {
+    box-sizing: border-box;
+    line-height: 1.25em;
+}
+
+body,
+ion-content {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body,
+ion-content {
+    background-color: hsla(117.00000000000004, 40%, 15%, 1);
+    background-image: radial-gradient(circle at 3% 92%, hsla(161, 100%, 50%, 1) 0%, transparent 67%), radial-gradient(circle at 46% 94%, hsla(227.6470588235294, 100%, 50%, 1) 0%, transparent 81%), radial-gradient(circle at 93% 95%, hsla(230.2941176470588, 100%, 23%, 1) 0%, transparent 66%), radial-gradient(circle at 89% 8%, hsla(243.52941176470586, 100%, 9%, 1) 0%, transparent 150%);
+    background-blend-mode: normal, normal, normal, normal;
+}
+
+.content {
+    --background: rgba(0, 0, 0, 0.5);
+}
+
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200vh;  /* Ocupa toda la altura de la pantalla */
+    position: relative; 
+}
+
+.logo-letras, .logo-icon {
+    max-width: 100%;  /* Ajusta el tamaño de las imágenes si es necesario */
+}
+
+.logo-icon {
+    margin-top: -200px;
+}
+
+/* Estilo básico para las nubes */
+.cloud {
+    position: absolute;
+    opacity: 0;  /* Inicialmente invisibles */
+    width: 200px; /* Ajusta el tamaño de las nubes si es necesario */
+}
+
+/* Animaciones */
+@keyframes slide-in-left {
+    0% {
+        left: -100%;  /* Fuera de la pantalla por la izquierda */
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        left: 10%;   /* Se posiciona dentro de la pantalla */
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        right: -100%;  /* Fuera de la pantalla por la derecha */
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        right: 10%;  /* Se posiciona dentro de la pantalla */
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        bottom: -100%;  /* Fuera de la pantalla por abajo */
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 10%;  /* Se posiciona dentro de la pantalla */
+        opacity: 1;
+    }
+}
+
+/* Aplicación de las animaciones a las nubes */
+.cloud-left {
+    left: -100%;  /* Inicial fuera de la pantalla */
+    top: -25px; 
+    animation: slide-in-left 3s ease-in-out forwards;
+}
+
+.cloud-right {
+    /* Ajustado para que esté justo encima del logo-letras */
+    right: 10%; 
+    top: 20%;
+    animation: slide-in-right 3s ease-in-out forwards;
+}
+
+.cloud-bottom {
+    top: 350px; 
+    left: 10%;  /* Ajusta la posición horizontal */
+    animation: slide-in-bottom 3s ease-in-out forwards;
+}

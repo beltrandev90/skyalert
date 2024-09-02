@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="title-with-logo">
+      <img src="../../../assets/img/logo-letras (1).png" alt="logo app" class="logo-letras">
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button class="logo-button">
+        <img src="../../../assets/img/logo-skyalert (1).png" alt="logo app" class="logo-icon">
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+  <div class="search-container">
+    <ion-searchbar (ionInput)="onCiudadChange($event)" [(ngModel)]="ciudad" placeholder="Buscar ciudad" debounce="0"></ion-searchbar>
+    <ion-button style="min-width: 200px; padding: 0 20px;" (click)="buscarCiudad()">
+      <ion-icon class="iconFav" name="search"></ion-icon>
+      <ion-label>Buscar</ion-label>
+    </ion-button>
+    
+    <ion-button style="min-width: 200px; padding: 0 20px;" (click)="openFavoritos()">
+      <ion-icon class="iconFav" name="heart-outline"></ion-icon>
+      <ion-label>Favoritos</ion-label>
+    </ion-button>
+
+    <ion-list class="transparent-list" *ngIf="(ciudadesFiltradas | async) as ciudades; else noCiudades">
+      <ion-item *ngFor="let ciudad of ciudades" (click)="selectCiudad(ciudad)">
+        {{ ciudad.name }}, {{ ciudad.country }}
+      </ion-item>
+    </ion-list>
+    <ng-template #noCiudades>
+      <p>No hay resultados</p>
+    </ng-template>
+  </div>
+
+  <!-- Mostrar los resultados si existen -->
+  <div *ngIf="resultados" class="weather-info">
+    <div class="location">
+      <ion-icon name="location-outline"></ion-icon>
+      <h2>{{ resultados.nombre }}</h2>
+      <ion-icon [name]="esFavorito ? 'heart' : 'heart-outline'" (click)="toggleFavorito()" class="favorite-icon"></ion-icon>
+    </div>
+    <div class="temperature">
+      <img [src]="resultados.icono" alt="Icono del clima">
+      <h1>{{ resultados.temperatura }}°C</h1>
+    </div>
+    <div class="description">
+      <p>{{ resultados.descripcion }}</p>
+    </div>
+    <div class="additional-info">
+      <p>Máxima: {{ resultados.maxTemp }}°C <fa-icon [icon]="['fas', 'thermometer-full']"></fa-icon></p>
+      <p>Mínima: {{ resultados.minTemp }}°C <fa-icon [icon]="['fas', 'thermometer-empty']"></fa-icon></p>
+      <p>Sensación Térmica: {{ resultados.sensacion }}°C <fa-icon [icon]="['fas', 'temperature-low']"></fa-icon></p>
+      <p>Viento: {{ resultados.viento }} m/s <fa-icon [icon]="['fas', 'wind']"></fa-icon></p>
+      <p>Humedad: {{ resultados.humedad }}% <fa-icon [icon]="['fas', 'tint']"></fa-icon></p>
+    </div>
+  </div>
+</ion-content>
