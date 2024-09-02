@@ -1,2 +1,0 @@
-# skyalert
-App SkyAlert
