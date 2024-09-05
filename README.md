@@ -22,7 +22,9 @@ La aplicación está desarrollada con Angular e Ionic, ofreciendo una experienci
 - Interfaz de usuario simple y atractiva, diseñada con Ionic.
 - Compatible con dispositivos móviles.
 
-## Video Demostrativo
+## Video demostrativo
+
+[![Ver video en YouTube](https://img.youtube.com/vi/ZMYiKRYq48Y/0.jpg)](https://youtube.com/shorts/ZMYiKRYq48Y?feature=share)
 
 ### Instrucciones de Instalación
 
