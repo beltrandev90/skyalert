@@ -8,6 +8,8 @@ import { Observable, of } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 import { ModalController } from '@ionic/angular';
 
+// Importar íconos de FontAwesome
+import { faCloud, faSun, faCloudRain, faCloudSun, faCloudShowersHeavy, faSnowflake, faSmog, faWind, faBolt, faCloudMoon, faCloudSunRain } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
@@ -34,6 +36,20 @@ export class HomePage {
 
   esFavorito: boolean = false;
   favoritos: string[] = [];
+
+  // Definir los íconos que se utilizarán en la página
+  faCloud = faCloud;
+  faSun = faSun;
+  faCloudRain = faCloudRain;
+  faCloudSun = faCloudSun;
+  faCloudShowersHeavy = faCloudShowersHeavy;
+  faSnowflake = faSnowflake;
+  faSmog = faSmog;
+  faWind = faWind;
+  faBolt = faBolt;
+  faCloudMoon = faCloudMoon;
+  faCloudSunRain = faCloudSunRain;
+
 
   constructor(
     private router: Router,
@@ -63,8 +79,33 @@ export class HomePage {
         this.buscarCiudad();
       }
     });
-    
-  } 
+
+  }
+
+  // Mapea los códigos de icono del API a los iconos de FontAwesome
+  getIconoClima(iconCode: string) {
+    switch (iconCode) {
+      case '01d': return this.faSun;
+      case '01n': return this.faCloudMoon;
+      case '02d': return this.faCloudSun;
+      case '02n': return this.faCloudMoon;
+      case '03d':
+      case '03n':
+      case '04d':
+      case '04n': return this.faCloud;
+      case '09d':
+      case '09n': return this.faCloudShowersHeavy;
+      case '10d':
+      case '10n': return this.faCloudRain;
+      case '11d':
+      case '11n': return this.faBolt;
+      case '13d':
+      case '13n': return this.faSnowflake;
+      case '50d':
+      case '50n': return this.faSmog;
+      default: return this.faCloud; // Ícono predeterminado
+    }
+  }
 
   initializeCurrentDate() {
     const now = new Date();
@@ -105,12 +146,12 @@ export class HomePage {
       console.log('Ciudad agregada a favoritos:', ciudad);
     }
   }
-  
+
   eliminarDeFavoritos(ciudad: string) {
     this.favoritos = this.favoritos.filter(fav => fav !== ciudad);
     localStorage.setItem('favoritos', JSON.stringify(this.favoritos));
     console.log('Ciudad eliminada de favoritos:', ciudad);
-  }  
+  }
 
   verificarSiEsFavorito() {
     if (this.resultados && this.resultados.nombre) {

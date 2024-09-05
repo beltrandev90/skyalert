@@ -26,6 +26,6 @@ export class FavoritosPage implements OnInit {
   }
 
   close() {
-    this.router.navigate(['']);
+    this.router.navigate(['/home']);
   }
 }

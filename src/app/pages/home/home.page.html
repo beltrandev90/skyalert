@@ -42,9 +42,11 @@
       <ion-icon [name]="esFavorito ? 'heart' : 'heart-outline'" (click)="toggleFavorito()" class="favorite-icon"></ion-icon>
     </div>
     <div class="temperature">
-      <img [src]="resultados.icono" alt="Icono del clima">
-      <h1>{{ resultados.temperatura }}°C</h1>
+      <!-- Reemplaza la imagen por el icono de FontAwesome -->
+      <fa-icon class="iconFav" [icon]="getIconoClima(resultados?.icono ?? '')"></fa-icon>
+      <h1>{{ resultados?.temperatura }}°C</h1>
     </div>
+    
     <div class="description">
       <p>{{ resultados.descripcion }}</p>
     </div>

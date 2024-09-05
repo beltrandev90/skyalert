@@ -42,11 +42,10 @@ ion-content {
 
 .logo-icon {
     width: 50px;
-    /* Ajusta el tamaño según tus necesidades */
     height: 50px;
-    /* Ajusta el tamaño según tus necesidades */
     object-fit: contain;
-    /* Asegura que la imagen mantenga sus proporciones */
+    margin-left: auto; /* Empuja el logo-icon hacia la derecha */
+    margin-right: 10px; /* Ajusta según el espacio que necesites */
 }
 
 .content {

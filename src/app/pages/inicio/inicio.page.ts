@@ -62,8 +62,13 @@ export class InicioPage {
         this.buscarCiudad();
       }
     });
-    
-  } 
+
+    // Lógica para redirigir después de 5 segundos (puedes ajustar el tiempo)
+    setTimeout(() => {
+      this.router.navigate(['/home']);  // Redirige a la página 'home'
+    }, 5000);  // Cambia este valor para ajustarlo al tiempo de tu animación
+
+  }
 
   initializeCurrentDate() {
     const now = new Date();
@@ -104,12 +109,12 @@ export class InicioPage {
       console.log('Ciudad agregada a favoritos:', ciudad);
     }
   }
-  
+
   eliminarDeFavoritos(ciudad: string) {
     this.favoritos = this.favoritos.filter(fav => fav !== ciudad);
     localStorage.setItem('favoritos', JSON.stringify(this.favoritos));
     console.log('Ciudad eliminada de favoritos:', ciudad);
-  }  
+  }
 
   verificarSiEsFavorito() {
     if (this.resultados && this.resultados.nombre) {
