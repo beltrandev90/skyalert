@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Favoritos</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+  <ion-list>
+    <ion-item *ngFor="let ciudad of favoritos" (click)="selectCiudad(ciudad)">
+      {{ ciudad }}
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+

@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap");
+
+* {
+    box-sizing: border-box;
+    line-height: 1.25em;
+}
+
+body,
+ion-content {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Aplica el fondo a todos los ion-content, aunque puedes ajustar la clase .content si es necesario */
+ion-content {
+    --background: none;
+    background-color: hsla(117.00000000000004, 40%, 15%, 1);
+    background-image: radial-gradient(circle at 3% 92%, hsla(161, 100%, 50%, 1) 0%, transparent 67%), radial-gradient(circle at 46% 94%, hsla(227.6470588235294, 100%, 50%, 1) 0%, transparent 81%), radial-gradient(circle at 93% 95%, hsla(230.2941176470588, 100%, 23%, 1) 0%, transparent 66%), radial-gradient(circle at 89% 8%, hsla(243.52941176470586, 100%, 9%, 1) 0%, transparent 150%);
+    background-blend-mode: normal, normal, normal, normal, normal;
+}
+
+ion-list {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con 60% de transparencia */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interior */
+    margin-top: 10px; /* Separación de otros elementos */
+    --ion-item-background: transparent; /* Hacer que el fondo de los ion-item sea transparente */
+}
+
+ion-item {
+    --background: transparent !important; /* Forzar fondo transparente */
+    --ion-item-background: transparent !important; /* Asegurar que el fondo también sea transparente aquí */
+    --color: white; /* Color del texto blanco */
+    font-weight: bold;
+    border-radius: 8px; /* Bordes redondeados en los elementos */
+    margin: 5px 0; /* Espaciado entre items */
+    
+    /* Efecto hover con fondo blanco transparente */
+    --ion-item-background-hover: rgba(255, 255, 255, 0.1);
+    --ion-item-background-activated: rgba(255, 255, 255, 0.2); /* Fondo un poco más visible cuando se activa (click) */
+}
+
+ion-list, ion-item {
+    width: 100%;
+    text-align: center;
+    font-family: "Montserrat", sans-serif !important; /* Asegurando que la fuente se aplique */
+}
+
+ion-item {
+    font-size: 1.5rem !important; /* Ajusta el tamaño de la fuente de los items */
+}
+
+ion-title {
+    font-family: "Montserrat", sans-serif !important; /* Asegurando que la fuente se aplique */
+    font-size: 1.6rem; /* Ajusta el tamaño de la fuente del título */
+    color: white;
+    font-weight: bold;
+}
+
+ion-icon {
+    color: white;
+    font-size: 25px;
+}

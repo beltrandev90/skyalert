@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap");
+
+* {
+    box-sizing: border-box;
+    line-height: 1.25em;
+}
+
+body,
+ion-content {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body,
+ion-content {
+    background-color: hsla(117.00000000000004, 40%, 15%, 1);
+    background-image: radial-gradient(circle at 3% 92%, hsla(161, 100%, 50%, 1) 0%, transparent 67%), radial-gradient(circle at 46% 94%, hsla(227.6470588235294, 100%, 50%, 1) 0%, transparent 81%), radial-gradient(circle at 93% 95%, hsla(230.2941176470588, 100%, 23%, 1) 0%, transparent 66%), radial-gradient(circle at 89% 8%, hsla(243.52941176470586, 100%, 9%, 1) 0%, transparent 150%);
+    background-blend-mode: normal, normal, normal, normal;
+}
+
+.title-with-logo {
+    display: flex;
+    align-items: center;
+    /* Alinea verticalmente la imagen con el contenido del ion-title */
+    justify-content: flex-start;
+    /* Alinea el logo-letras a la izquierda */
+}
+
+/* Estilo para la imagen del logo-letras */
+.logo-letras {
+    width: 130px;
+    /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    object-fit: contain;
+    /* Asegura que la imagen no se distorsione */
+    margin-top: 15px;
+}
+
+.logo-icon {
+    width: 50px;
+    /* Ajusta el tamaño según tus necesidades */
+    height: 50px;
+    /* Ajusta el tamaño según tus necesidades */
+    object-fit: contain;
+    /* Asegura que la imagen mantenga sus proporciones */
+}
+
+.content {
+    --background: rgba(0, 0, 0, 0.5);
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Estilo general para todos los botones */
+ion-button {
+    --border-radius: 20px; /* Bordes redondeados */
+    --background: transparent; /* Fondo transparente por defecto */
+    --color: #ffffff; /* Letras en blanco */
+    font-weight: bold; /* Letras en negrita */
+    margin-top: 10px; /* Espaciado superior */
+    font-size: 1rem; /* Tamaño de fuente */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+}
+
+/* Estilo específico para el botón "Buscar" */
+.search-button {
+    --padding-start: 20px; /* Espaciado interno */
+    --padding-end: 20px; /* Espaciado interno */
+    --width: 200px; /* Ancho específico para el botón Buscar */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo específico para el botón "Favoritos" */
+.logo-button {
+    --padding-start: 10px; /* Ajusta el espaciado interno para hacer el botón más compacto */
+    --padding-end: 10px; /* Ajusta el espaciado interno */
+    min-width: 150px; /* Ancho mínimo para el botón Favoritos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Efectos para el estado hover de ambos botones */
+ion-button:hover {
+    --background: rgb(24, 17, 52); /* Color de fondo al pasar el cursor */
+    transform: scale(1.05); /* Leve aumento de tamaño al pasar el cursor */
+}
+
+/* Efectos para el estado activo de ambos botones */
+ion-button:active {
+    --background: rgb(24, 17, 52); /* Fondo al hacer clic */
+    transform: scale(1.0); /* Tamaño normal al hacer clic */
+}
+
+.iconFav {
+    margin-right: 10px;
+}
+
+.transparent-list {
+    --background: transparent !important; /* Asegura que el fondo sea transparente */
+    background-color: rgba(0, 0, 0, 0) !important; /* Elimina cualquier color de fondo */
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}  
+
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centra horizontalmente */
+    text-align: center;
+    font-size: 2.0rem !important;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Centra verticalmente */
+}
+
+.location h2 {
+    margin: 0;
+    padding-left: 10px;
+    /* Espacio entre el ícono y el texto */
+    font-size: inherit;
+    /* Hereda el tamaño de fuente del contenedor */
+}
+
+.location ion-icon {
+    margin-right: 5px;
+    font-size: 1.5rem;
+}
+
+.search-container {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ion-searchbar {
+    --border-radius: 20px;
+    /* Borde redondeado para el searchbar */
+    --background: #f2f2f2;
+    /* Fondo gris claro */
+    --padding-start: 12px;
+    /* Padding interno para el buscador */
+    --padding-end: 12px;
+    /* Padding interno para el buscador */
+}
+
+.weather-info {
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.temperature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.temperature img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.description {
+    font-size: 1rem;
+    color: #666666;
+    margin-top: 10px;
+}
+
+.additional-info fa-icon {
+    margin-left: 8px;
+    /* Espacio entre el texto y el icono */
+    color: #ffffff;
+    /* Cambia esto al color que desees */
+    font-size: 1.8em;
+    /* Ajusta el tamaño del icono */
+}
+
+ion-list {
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Fondo negro con 60% de transparencia */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    padding: 10px;
+    /* Espaciado interior */
+    margin-top: 10px;
+    /* Separación de otros elementos */
+
+    ion-item {
+        --background: transparent;
+        /* Fondo transparente para cada item */
+        --color: white;
+        /* Color del texto blanco */
+        font-weight: bold;
+        border-radius: 8px;
+        /* Bordes redondeados en los elementos */
+        margin: 5px 0;
+        /* Espaciado entre items */
+
+        /* Efecto hover con fondo blanco transparente */
+        --ion-item-background-hover: rgba(255, 255, 255, 0.1);
+        --ion-item-background-activated: rgba(255, 255, 255, 0.2);
+        /* Fondo un poco más visible cuando se activa (click) */
+    }
+}
+
+/* Estilo para el mensaje cuando no hay resultados */
+ng-template#noCiudades p {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.favorite-icon {
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+    margin-left: 10px;
+}
