@@ -80,17 +80,6 @@ SkyAlert utiliza la API de [OpenWeatherMap](https://api.openweathermap.org/) par
 
 Para más detalles sobre cómo funciona la API, visita su [documentación](https://openweathermap.org/api).
 
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
-
-#### add(num1, num2)
-
-Takes two numbers and returns the sum.
-
-
 ## Tecnologías
 
 - **Angular**: Framework de desarrollo front-end.
