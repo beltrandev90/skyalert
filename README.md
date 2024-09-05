@@ -127,4 +127,8 @@ Si tienes alguna pregunta, sugerencia o simplemente quieres ponerte en contacto,
 - **GitHub**: [beltrandev90](https://github.com/beltrandev90)
 - 
 **Sitio Web**: [beltrandev.com](https://beltrandev.com/)
+
 ¡Esperamos saber de ti!
+=======
+¡Esperamos saber de ti!
+>>>>>>> c4611f46c8304b52611bd482ac81b8c8655dccb8
