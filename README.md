@@ -1,10 +1,13 @@
+
 # SkyAlert
 
 SkyAlert es una aplicación sencilla diseñada para proporcionar información meteorológica de cualquier ciudad del mundo. Utiliza la API de [OpenWeatherMap](https://api.openweathermap.org/) para obtener datos actualizados sobre el clima, incluyendo temperatura, humedad, velocidad del viento, y más.
 
 La aplicación está desarrollada con Angular e Ionic, ofreciendo una experiencia de usuario fluida y responsiva tanto en dispositivos móviles como en navegadores web.
 
+
 ## Tabla de Contenidos
+
 - [Características](#características)
 - [Video Demostrativo](#video-de-demostrativo)
 - [Instalación](#instalación)
@@ -14,19 +17,16 @@ La aplicación está desarrollada con Angular e Ionic, ofreciendo una experienci
 - [Contribuciones](#contribuciones)
 - [Licencia](#licencia)
 - [Contacto](#contacto)
-
 ## Características
 
 - Búsqueda de información meteorológica por ciudad.
 - Visualización de datos como temperatura, humedad, y velocidad del viento.
 - Interfaz de usuario simple y atractiva, diseñada con Ionic.
 - Compatible con dispositivos móviles.
-
 ## Video demostrativo
 
 [![Ver video en YouTube](https://img.youtube.com/vi/ZMYiKRYq48Y/0.jpg)](https://youtube.com/shorts/ZMYiKRYq48Y?feature=share)
-
-### Instrucciones de Instalación
+## Instrucciones de Instalación
 
 #### Requisitos Previos
 
@@ -51,49 +51,37 @@ La aplicación está desarrollada con Angular e Ionic, ofreciendo una experienci
   npm install -g @ionic/cli
   npm install -g @angular/cli
 
-### Ejecución del Servidor de Desarrollo
+La aplicación estará disponible en tu navegador en la dirección http://localhost:8100/ o en el puerto que hayas especificado.
+
+
+## Ejecución del Servidor de Desarrollo
 
 Para iniciar el servidor de desarrollo de Ionic, ejecuta el siguiente comando:
 
-```bash
 ionic serve
 
-La aplicación estará disponible en tu navegador en la dirección http://localhost:8100/ o en el puerto que hayas especificado.
-
-###
-Acceso a la Aplicación
-
-Para acceder a la aplicación, abre tu navegador web y visita:
-
-http://localhost:8100/inicio
-
-    
+La aplicación estará disponible en tu navegador en la dirección http://localhost:8100/ o en el puerto que hayas especificado
 ## Uso
 
 - Ingresa el nombre de una ciudad en la barra de búsqueda.
 - La aplicación mostrará la información meteorológica actual de la ciudad seleccionada.
-
-
 ## API
 
 SkyAlert utiliza la API de [OpenWeatherMap](https://api.openweathermap.org/) para obtener datos meteorológicos.
 
 Para más detalles sobre cómo funciona la API, visita su [documentación](https://openweathermap.org/api).
-
-## Tecnologías
+## Tecnologías Utilizadas
 
 - **Angular**: Framework de desarrollo front-end.
 - **Ionic**: Framework para el desarrollo de aplicaciones móviles híbridas.
 - **OpenWeatherMap API**: Fuente de datos meteorológicos.
-
-### Cómo Contribuir
+## Contribución
 
 1. 
 **Fork del Repositorio**: Haz un fork del repositorio en GitHub y clona tu fork localmente:
 
-   ```bash
-   git clone https://github.com/beltrandev90/anotame.git
-   cd anotame
+   git clone https://github.com/beltrandev90/skyalert.git
+   cd skyalert
 
 2. 
 **Crear una Rama**
@@ -118,7 +106,6 @@ git push origin feature/nueva-funcionalidad
 **Enviar un Pull Request**
 Ve a tu repositorio en GitHub y crea un Pull Request para que tus cambios sean revisados e incorporados al proyecto principal.
 Para más detalles, consulta el archivo LICENSE en este repositorio.
-
 ## Licencia
 
 Este proyecto está licenciado bajo los términos de la [Licencia MIT](https://opensource.org/licenses/MIT).
@@ -136,7 +123,7 @@ Para más detalles, consulta el archivo [LICENSE](./LICENSE) en este repositorio
 
 Si tienes alguna pregunta, sugerencia o simplemente quieres ponerte en contacto, puedes hacerlo a través de los siguientes medios:
 
-- **Email**: [inma@beltrandev.com](mailto:inma@beltrandev.com)
+- **Email**: [info@beltrandev.com](mailto:info@beltrandev.com)
 - **GitHub**: [beltrandev90](https://github.com/beltrandev90)
 - 
 **Sitio Web**: [beltrandev.com](https://beltrandev.com/)
