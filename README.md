@@ -5,7 +5,7 @@ SkyAlert es una aplicación sencilla diseñada para proporcionar información me
 La aplicación está desarrollada con Angular e Ionic, ofreciendo una experiencia de usuario fluida y responsiva tanto en dispositivos móviles como en navegadores web.
 
 ## Tabla de Contenidos
-- [Características].(#características).
+- [Características](#características)
 - [Video Demostrativo](#video-de-demostrativo)
 - [Instalación](#instalación)
 - [Uso](#uso)
